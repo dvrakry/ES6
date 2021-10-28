@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div></div>
+
+    <script>
+        // var pants= 20;
+        // var socks = 100;
+        // `바지${pants} 양말${socks}`;
+
+        // function 해체분석기(문자들, 변수들1, 변수들2) {
+        //     console.log(문자들[1] +변수들1+ 문자들[0] + 변수들2);
+        // }
+
+        // 해체분석기`바지${pants} 양말${socks}`
+
+
+        var 어레이 = ['hello','world'];
+        console.log(...어레이);
+        
+        var 문자 = 'hello';
+        console.log(...문자);
+
+        var a = [1,2,3];
+        var b = [4,5];
+
+        var c = [...a, ...b];
+        console.log(c);
+
+        function 더하기(a,b,c) {
+            console.log(a + b + c);
+        }
+        
+        var 어레이 = [10, 20, 30];
+
+        더하기(어레이[0] , 어레이[1] , 어레이[2]);
+
+        더하기.apply(undefined, 어레이);
+
+        더하기(...어레이);
+
+        
+
+
+
+
+
+
+
+
+
+
+        // var 변수 = `손흥민`;
+        // var 문자 = `안녕하세요 저는 ${변수} 입니다. 반갑습니다`;
+
+        // function 해체분석기(문자들, 변수들) {
+        //    console.log(문자들);
+        //    console.log(변수들);
+        // }
+
+        // 해체분석기`안녕하세요 저는 ${변수} 입니다. 반갑습니다`;
+        // console.log();
+        //backquote 장점은 1.문자안에서 자유롭게 엔터키도 가능
+        //                 2. 중간중간 변수 넣기 쉬움
+
+    </script>
+</body>
+</html>
