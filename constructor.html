@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div></div>
+
+    <script>
+
+
+        function 기계(이름) {
+            this.name = 이름; //여기서 this는 새로생성되는 object를 뜻함
+            this.age = 15;
+            this.sayHi = function() {
+                console.log('안녕하세요' + this.name + '입니다');
+            }
+        }
+
+        기계.prototype.gender = '남';
+
+        var 부모 = { name : 'Kim'};
+        var 자식 = {};
+
+        자식.__proto__ = 부모;
+
+
+
+        
+        var 학생1 = new 기계('kim');
+        var 학생2 = new 기계('kang');
+
+        //간단예제 1
+
+        // function 상품(name, price){
+        //     this.name = name;
+        //     this.price = price;
+        //     this.부가세 = function() {
+        //         console.log('부가세 : ' + (this.price*0.1 ));
+        //     }
+        // }
+
+        // var 상품1 = new 상품('iPhone', 1130000);
+        // var 상품2 = new 상품('AppleWatch', 340000);
+
+        // console.log(상품1);
+        // console.log(상품2);
+        // console.log(상품1.부가세());
+
+
+    </script>
+
+</body>
+</html>
