@@ -13,26 +13,63 @@
     <script>
 
 
-        function 기계(이름) {
-            this.name = 이름; //여기서 this는 새로생성되는 object를 뜻함
-            this.age = 15;
+        // function 기계(이름) {
+        //     this.name = 이름; //여기서 this는 새로생성되는 object를 뜻함
+        //     this.age = 15;
+        //     this.sayHi = function() {
+        //         console.log('안녕하세요' + this.name + '입니다');
+        //     }
+        // }
+
+        // 기계.prototype.gender = '남';
+
+        // var 부모 = { name : 'Kim'};
+        // var 자식 = {};
+
+        // 자식.__proto__ = 부모;
+
+        
+        // var 학생1 = new 기계('kim');
+        // var 학생2 = new 기계('kang');
+
+
+        //연습문제 1번
+
+        function 기계(이름, 나이) {
+            this.name = 이름;
+            this.age = 나이;
             this.sayHi = function() {
-                console.log('안녕하세요' + this.name + '입니다');
+                console.log('안녕 나는 ' + this.name + '이야~ 반가워!!!')
             }
         }
 
-        기계.prototype.gender = '남';
+        var 학생1 = new 기계('kimu', 20);
+        var 학생2 = new 기계('bab', 22);
+        var 학생3 = new 기계('kim', 24);
 
-        var 부모 = { name : 'Kim'};
-        var 자식 = {};
+        console.log(학생1.sayHi());
+        console.log(학생2.name);
+        console.log(학생3.name);
 
-        자식.__proto__ = 부모;
-
-
-
+        //연습문제2
         
-        var 학생1 = new 기계('kim');
-        var 학생2 = new 기계('kang');
+        Array.prototype.remove3 = function() {
+            for(var i=0; i < this.length; i++){
+                if(this[i] === 3){
+                    this.splice(i,1);
+                }
+            }
+        };
+
+        var arr = [1,2,3,4];
+        arr.remove3();
+
+        console.log(arr);
+
+
+
+
+
 
         //간단예제 1
 

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+        // es5에서 상속기능
+
+        // var 부모 = {name : 'Kim', age : 50};
+
+        // var 자식 = Object.create(부모);
+
+        // 자식.age = 14;
+
+        // var 손자 = Object.create(자식);
+
+        //es6 에서 상속기능
+
+        // class 부모 {
+        //     constructor(){
+        //         this.name = 'Kim';
+        //         // this.sayHi = function() {
+        //         //     console.log('hello')
+        //         // }
+        //     }
+        //     sayHi(){
+        //         console.log('hello')
+        //     }
+        // }
+
+        // var 자식 = new 부모();
+        // 자식.age = 13;
+
+        class 할아버지{
+            constructor(name){
+                this.성 = 'kim';
+                this.이름 = name;
+            }
+            sayHii(){
+                console.log('안녕 나는 할아버지야');
+            }
+        }
+
+        class 아버지 extends 할아버지 {
+            constructor(name){
+                super(name);
+                this.나이 = 50;
+            }
+            sayHii(){
+                console.log('안녕 나는 아버지야');
+                super.sayHii();
+            }
+        }
+
+        var 할아버지1 = new 할아버지('만덕');
+        var 아버지1 = new 아버지('만수');
+
+        
+
+    </script>
+</body>
+</html>
