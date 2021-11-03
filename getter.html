@@ -11,6 +11,30 @@
 
     <script>
 
+        var arr = [2,3,4];
+
+        // var a = arr[0];
+        // var b = arr[1];
+
+        var [a,b,c = 10] = [2,3];
+
+        //var obj = {name : 'Kim', age : 30};
+
+        var { name , age } = {name : 'Kim', age : 30};
+
+        console.log(name);
+
+        var obg = {name : 'Gim', age : 20};
+
+        function 함수({name, age}) {
+            console.log(name);
+            console.log(age);
+        }
+
+        함수({name : 'Kook', age : 33});
+
+
+
         //연습문제3
 
         // class unit{
@@ -29,24 +53,24 @@
 
         // var 캐릭터 = new unit();
 
-        var data = {
-            odd : [],
-            even : [],
-            get getter함수(){
-                return [...this.odd, ...this.even].sort();
-            },
+        // var data = {
+        //     odd : [],
+        //     even : [],
+        //     get getter함수(){
+        //         return [...this.odd, ...this.even].sort();
+        //     },
 
-            setter함수 : function(...숫자들){
-                숫자들.forEach((a) => {
-                    if(a%2 == 1){
-                        this.odd.push(a);
-                    } else {
-                        this.even.push(a);
-                    }
-                })
-                console.log(숫자들);
-            }
-        };
+        //     setter함수 : function(...숫자들){
+        //         숫자들.forEach((a) => {
+        //             if(a%2 == 1){
+        //                 this.odd.push(a);
+        //             } else {
+        //                 this.even.push(a);
+        //             }
+        //         })
+        //         console.log(숫자들);
+        //     }
+        // };
 
 
 
