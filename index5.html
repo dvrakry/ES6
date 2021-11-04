@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button id="button">버튼</button>
+
+
+    <script>
+
+        var products = [
+            {
+                name1 : 'chair',
+                price1 : 7000,
+            },
+            {
+                name2 : 'soga',
+                price : 5000,
+            },
+            {
+                name1: 'desk',
+                price3 : 9000,
+            }
+        ]
+
+        let newValue;
+        let newKey;
+
+        
+
+        for (let item of products){
+            for(let key in item){
+                if(isNaN(parseInt(key.slice(-1)))== false
+                ){
+                    newValue = item[key];
+                    newKey = key.slice(0,-1);
+
+                    item[newKey] = newValue;
+
+                    delete item[key];
+                }
+            }
+        }
+            
+            console.log(products);
+
+
+
+
+    </script>
+
+        <script>
+
+        class 부모 {
+
+        }
+        부모.prototype.name = "Park";
+
+        var 오브젝트 = new 부모();
+
+
+
+
+        async function 더하기() {
+            
+            var 프로미스 = new Promise(function(성공, 실패) {
+               document.getElementById('button').addEventListener('click',
+               function() {
+                    성공('성공했어요');
+               })
+            });
+
+            var 결과 = await 프로미스;
+            console.log(결과);
+           
+
+            // 프로미스.then(function() {
+            //     console.log('성공했어요');
+            // });
+
+         }
+
+         더하기();
+
+        // 더하기().then(function(결과) {
+        //     console.log('성공욥' + 결과);
+        // })
+
+
+
+    </script>
+    
+</body>
+</html>
