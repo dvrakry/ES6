@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <custom-input name = "비번"></custom-input>
+
+    <script>
+
+        class 클래스 extends HTMLElement{
+            connectedCallback(){
+                let name = this.getAttribute('name');
+                this.innerHTML = `<label>${name} 인풋이에요</label><input>`
+            }
+        }
+
+        customElements.define('custom-input', 클래스);
+
+        // var 출석부 = ['john', 'tim', 'andy', 'tim'];
+
+        // var 출석부2 = new Set(['john', 'tim', 'andy', 'tim']);
+
+        // 출석부2 = [...출석부2];
+
+
+        // var person = new Map();
+        // person.set('name', 'Kim');
+        // person.set('age', 20);
+
+        // person.get('age');
+
+        // person.size;
+
+        // var person = new Map([
+        //     ['name', 'Kim'],
+        //     ['age', 20]
+        // ]);
+
+        // for (var key of person.keys()){
+        //     console.log(key);
+        // }
+        
+
+
+        // var 심볼 = Symbol('설명');
+        // var weight = Symbol('내 시크릿 몸무게임');
+        // var height = Symbol('내 키임');
+
+        // var person = { name : 'Kim'};
+        // person[weight] = 88;
+        // person[height] = 180;
+
+        // for ( var key in person) {
+        //     console.log(person[key]);
+        // }
+
+
+
+    </script>
+</body>
+</html>
